@@ -1,0 +1,59 @@
+package pages;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+
+import groovyjarjarantlr.collections.List;
+import steps.Hooks;
+import support.DriverQA;
+
+public class HomePage extends Hooks {
+
+	@Before
+	public void beforeScenario() {
+
+	}
+
+	@After
+	public void depoisDoTeste() {
+
+		driver.quit();
+	}
+
+	public DriverQA driver;
+
+	public HomePage(DriverQA stepDriver) {
+		driver = stepDriver;
+	}
+
+	public void openPage() {
+		String url = "https://www.americanas.com.br/";
+		driver.openURL(url);
+	}
+
+	public void writeFieldSearch(String value) throws InterruptedException {
+		driver.sendKeys(value, "h_search-input", "id");
+	}
+
+	public void clickForSearch() {
+		driver.click("//li[@class='ac-lst-it sz sz-1']//a[@class='ac-lnk src-lnk ac-term-key']", "xpath");
+	}
+
+	public String checkTitleForSearch() {
+		return driver.getText("//h1[@class='h1 page-title']", "xpath");
+	}
+	
+	public void selecionarProduto() {
+		driver.click("//div[@class='RippleContainer-sc-1rpenp9-0 dMCfqq']", "xpath");
+	}
+	
+	public void adicionarCarrinho() {
+		driver.click("//span[contains(.,'comprar')]", "xpath");
+	}
+	
+	public void clickContinue() {
+		driver.click("btn-continue", "id");
+	}
+}

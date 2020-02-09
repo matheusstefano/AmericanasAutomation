@@ -1,0 +1,40 @@
+package steps;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import org.junit.Assert;
+import pages.HomePage;
+import support.BaseSteps;
+
+public class HomePageSteps extends BaseSteps {
+
+	public static HomePage homePage = new HomePage(driver);
+
+	@Given("Que o usuario esteja no site da Americanas")
+	public void que_o_usuario_esteja_no_site_da_Americanas() {
+		homePage.openPage();
+	}
+
+	@When("^Digitar \"([^\\\"]*)\" no campo de busca$")
+	public void digitar_no_campo_de_busca(String string)throws InterruptedException  {
+	homePage.writeFieldSearch(value);
+	}
+
+	@And("Clicar em buscar")
+	public void clicar_em_buscar() {
+
+	}
+
+	@Then("Devera ser apresentado o produto")
+	public void devera_ser_apresentado_o_produto() {
+
+	}
+
+	@And("O usuario devera adicionar ao carrinho")
+	public void o_usuario_devera_adicionar_ao_carrinho() {
+
+	}
+
+}

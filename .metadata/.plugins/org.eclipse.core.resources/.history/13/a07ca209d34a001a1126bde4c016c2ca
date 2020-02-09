@@ -1,0 +1,33 @@
+package pages;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import steps.Hooks;
+import support.DriverQA;
+
+public class HomePage extends Hooks {
+
+	@Before
+	public void beforeScenario() {
+
+	}
+
+	@After
+	public void depoisDoTeste() {
+
+		driver.quit();
+	}
+
+    public DriverQA driver;
+
+    public HomePage(DriverQA stepDriver) {
+        driver = stepDriver;
+    }
+
+    public void openPage() {
+        String url = "https://www.americanas.com.br/";
+        driver.openURL(url);
+    }
+
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4213371700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Usuario ira adicionar um produto do site no Carrinho",
+        "description": "",
+        "id": "compra-de-produto-americanas;usuario-ira-adicionar-um-produto-do-site-no-carrinho",
+        "after": [
+          {
+            "result": {
+              "duration": 802448000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2170988100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Que o usuario esteja no site da Americanas",
+            "match": {
+              "location": "HomePageSteps.que_o_usuario_esteja_no_site_da_Americanas()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1083206500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Digitar \"Iphone\" no campo de busca",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Iphone",
+                  "offset": 9
+                }
+              ],
+              "location": "HomePageSteps.digitar_no_campo_de_busca(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 848923200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Clicar em buscar",
+            "match": {
+              "location": "HomePageSteps.clicar_em_buscar()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1094630200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Devera ser apresentado o produto",
+            "match": {
+              "location": "HomePageSteps.devera_ser_apresentado_o_produto()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 11215254000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "O usuario devera adicionar ao carrinho",
+            "match": {
+              "location": "HomePageSteps.o_usuario_devera_adicionar_ao_carrinho()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Compra de produto Americanas",
+    "description": "",
+    "id": "compra-de-produto-americanas",
+    "keyword": "Feature",
+    "uri": "CompraEcommerce.feature"
+  }
+]
